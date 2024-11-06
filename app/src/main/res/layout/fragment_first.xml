@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activity.MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:backgroundTint="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="ExtraText">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="60dp"
+            android:text="切断/接続"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.049"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.023"
+            tools:ignore="HardcodedText" />
+
+        <Switch
+            android:id="@+id/sw_connect"
+            android:layout_width="74dp"
+            android:layout_height="45dp"
+            android:buttonTint="#65E86A"
+            android:buttonTintMode="add"
+            android:scaleX="1.5"
+            android:scaleY="1.5"
+            android:thumbTint="@drawable/ic_new_thumb"
+            android:trackTint="@drawable/ic_new_track"
+            app:layout_constraintEnd_toEndOf="@+id/sw_off"
+            app:layout_constraintTop_toTopOf="@+id/textView"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+        <Switch
+            android:id="@+id/sw_off"
+            android:layout_width="74dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginRight="40dp"
+            android:scaleX="1.5"
+            android:scaleY="1.5"
+            android:textColorLink="#4CAF50"
+            android:thumbTint="@drawable/ic_new_thumb"
+            android:trackTint="@drawable/ic_new_track"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.89"
+            app:layout_constraintStart_toEndOf="@+id/textView3"
+            app:layout_constraintTop_toTopOf="@+id/sw_connect"
+            app:layout_constraintVertical_bias="0.088"
+            tools:ignore="RtlHardcoded,UseSwitchCompatOrMaterialXml" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="消灯/点灯"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="@+id/textView"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/sendButton"
+            android:layout_width="175dp"
+            android:layout_height="59dp"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="500dp"
+            android:layout_marginBottom="130dp"
+            android:backgroundTint="@android:color/darker_gray"
+            android:text="画像番号送信"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            app:cornerRadius="1dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/textView4"
+            app:layout_constraintTop_toTopOf="@+id/textView"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="画像番号選択"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="@+id/textView3"
+            app:layout_constraintTop_toBottomOf="@+id/textView3"
+            tools:ignore="HardcodedText" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="175dp"
+            android:layout_height="?attr/dropdownListPreferredItemHeight"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/bg_spinner"
+            android:drawSelectorOnTop="true"
+            android:dropDownWidth="175dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/textView4"
+            app:layout_constraintTop_toBottomOf="@+id/textView4"
+            app:layout_constraintVertical_bias="0.007" />
+
+        <TextView
+            android:id="@+id/responseTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="45dp"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text=""
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

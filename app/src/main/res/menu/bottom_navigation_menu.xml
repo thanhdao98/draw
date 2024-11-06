@@ -1,0 +1,13 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <item
+        android:id="@+id/nav_pencil"
+        android:icon="@drawable/ic_pen"
+        android:title="Pencil"
+        tools:ignore="HardcodedText" />
+    <item
+        android:id="@+id/nav_eraser"
+        android:icon="@drawable/ic_eraser"
+        android:title="Eraser"
+        tools:ignore="HardcodedText" />
+</menu>
